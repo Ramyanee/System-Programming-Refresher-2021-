@@ -1,0 +1,27 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ns/call  ns/call  name    
+ 54.52      3.49     3.49 2269806252     1.54     1.54  main
+ 47.21      6.51     3.02                             fibonacci
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) for 0.15% of 6.51 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    3.02    3.49                 fibonacci [1]
+                3.49    0.00 2269806252/2269806252     main [2]
+-----------------------------------------------
+                                  43             main [2]
+                3.49    0.00 2269806252/2269806252     fibonacci [1]
+[2]     53.6    3.49    0.00 2269806252+43      main [2]
+                                  43             main [2]
+-----------------------------------------------
+
+Index by function name
+
+   [1] fibonacci               [2] main
